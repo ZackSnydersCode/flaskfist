@@ -1,0 +1,42 @@
+<html <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Your Love</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="shortcut icon" type="image/x-icon" href="static/app_pics/favicon.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="static/app_pics/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="static/app_pics/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="static/app_pics/favicon-16x16.png">
+        <link rel="stylesheet" href="{{files[1]}}">
+    </head>
+    <body>
+      <div class="main_cont">
+     <nav class="nav_br">
+          <button class="nv_elm"><i class="fa-solid fa-chevron-left bck_btn" style="color: #000000;"></i></button>
+          <li><button class="dlt_ht nv_elm">Delete All</button></li>
+          <li><button class="Stp_svg nv_elm">this is </button></li>
+          <li class="lkmlm"><a href="/pn_pg"><i class="fa-solid fa-compact-disc  pined_it" style="color: #ffffff;"></i></a></li>
+         
+          <div class='ld_anim'></div>
+      </nav>
+        <div class="sub_cont"> 
+          <div class="aspect-ratio-container">
+            <div class="ht_view">
+            </div>
+          </div> 
+        </div>
+      </div>
+      <script>
+        {%block javascript%}
+        const status = {{status|tojson|safe}}
+        console.log(status)
+        {%endblock%}
+      </script>
+        <script src="{{files[0]}}" >
+        </script>
+    </body>
+</html>

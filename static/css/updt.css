@@ -1,0 +1,189 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Set base font styles */
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  /* Global styles */
+  .dash_board_content_wrapper {
+    border: 1px solid black;
+    height: 100%;
+    width: 100%;
+    display: flex;
+  }
+  
+  .right_widget {
+    flex: 1;
+  }
+  
+  ._left_side_widjet {
+    border: 0.9px solid black;
+    height: inherit;
+    width: 20%;
+  }
+  
+  /* Create Wave section styles */
+  .mech_container {
+    padding: 20px;
+  }
+  
+  .mech_feature_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .tools_container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .file_graphics {
+    display: flex;
+  }
+  
+  .left_sub_widget {
+    margin-right: 20px;
+  }
+  
+  .wave_wave_form {
+    /* Your styles for the wave waveform */
+  }
+  
+  .wave_description {
+    display: inline-block;
+    margin-top: 10px;
+    margin: 1rem;
+  }
+  
+  .wave_title,
+  .wave_description_txt {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .wave_qik_grab_info_tile {
+    margin-bottom: 10px;
+  }
+  
+  .file_handeling_frame {
+    height: 100%;
+  width:4%;
+  border:2px solid white;
+  float:right;
+  border-radius: 2rem;
+  background: rgb(42, 41, 41);
+  }
+  
+  .submit_to_srvr,
+  .play_framed_file,
+  .volume_key_range_supra_container {
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+  
+  .control_pannel_icons {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, #dd3400, #e52e71);
+  }
+  
+  .custom-range {
+    width: 100px;
+  }
+  
+  .tools-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+  
+  .media-file {
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+  
+  .gradient-icon {
+    font-family: "Font Awesome";
+    font-weight: 900;
+  }
+  
+  .span_container_err_msg {
+    margin-top: 20px;
+  }
+  
+  .all_err_msgs_are_here {
+    /* Your styles for the error messages */
+  }
+  
+  /* Left side widget styles */
+  ._station_stat_holder,
+  ._take_to_waves_holder,
+  ._station_comments_holder_,
+  ._station_content_all_holder,
+  .profile_setting_holder,
+  .create_wave_holder {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+    /* .xdrfgd,
+  .bdfgd,
+  .csrfgt,
+  .vpolopo,
+  .crtwav {
+  Your styles for the widget backgrounds
+  }
+   */
+  ._stat_text_holder,
+  ._station_sta_icon_holder,
+  ._station_sta_icon_holder,
+  .station_comments_icon_holder,
+  ._station_content_text,
+  ._station-content_icon_holder,
+  .profile_text,
+  .profile_settings_icon_holder,
+  .create_wave_text,
+  .create_wave_icon_holder {
+    margin-right: 10px;
+  }
+  
+  .stat_icon,
+  .comment_icon,
+  .frquented_wav_icon,
+  .profile_settings_icon,
+  .create_wave_icon {
+    font-family: "Font Awesome";
+    font-weight: 900;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    ._left_side_widjet {
+      display: none;
+    }
+  
+    .right_widget {
+      width: 100%;
+    }
+  }
+  

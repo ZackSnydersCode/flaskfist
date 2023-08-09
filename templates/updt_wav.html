@@ -1,0 +1,117 @@
+<html <!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Updating {{obj.tTl}}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{files[0]}}">
+        <script src="https://kit.fontawesome.com/99c36363f5.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/2.0.4/wavesurfer.min.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/waves.css/dist/waves.css">
+        <link rel="shortcut icon" type="image/x-icon" href="static/app_pics/favicon.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="static/app_pics/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="static/app_pics/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="static/app_pics/favicon-16x16.png">
+        </head>
+    <body>  
+        <div class="dash_board_content_wrapper" id="dash_board_content_holder">
+            <div class="right_widget creata_wav">
+                <div class="mech_container">
+                    <div class="mech_feature_container miodbjczzz">
+                      <div class="tools_container">
+                        <div class="file_graphics">
+                           <div class="left_sub_widget">
+                            <div class="wave_wave_form"></div>
+                        <div class="wave_description">
+                            <textarea class="wave_title" rows="" maxlength="250" >{{obj.tTl}}</textarea>
+                            <textarea class="wave_description_txt" rows="4" maxlength="500" >{{obj.wv_dec}}</textarea>
+                            <button class='tpn_rmvrr'>Remove</button>
+                            <label class="custom-file-input">
+                              <span class="pico"></span>
+                              <input type="file" id="file-upload" class="wave_qik_grab_info_tile">
+                            </label>
+                                                     </div>
+                    </div> 
+
+                    <div class="file_handeling_frame">
+
+                        <div class="submit_to_srvr control_pannel_framed_btns media-file" id="submit_to_srvr_btn">
+                            <i class="fa-solid fa-paper-plane control_pannel_icons submt_lfe "></i>
+                        </div>   
+                        <div class="play_framed_file control_pannel_framed_btns media-file waves-effect waves-ripple" id="play_audio">
+                        </div>                               
+                        <div class="volume_key_range_supra_container media-file" id="volume_key" >
+                           <div class="updt_btn_tap"><i class="fa-solid fa-circle-check"></i></div>
+                          </div> 
+                          <div class="media-file tool stp_media_rec" id="users_media_1">
+                            <i class="fa-solid fa-hand gradient-icon"></i>
+                        </div>
+                        <div class="media-file tool rec_media_btn" id="users_media_2">
+                              <i class="fa-solid fa-microphone browser-media gradient-icon"></i>
+                          </div>
+                        <div class="media-file tool file_ t_users_media_file_btn" id="users_media_3">
+                          <i class="fa-solid fa-file-waveform file-icon gradient-icon"></i>
+                          <input type="file" class="users-file" id="users_file">
+                        </div><br>   
+ 
+                    </div> 
+                        </div>
+                        <div class="span_container_err_msg"><span class="all_err_msgs_are_here"></span></div> 
+
+                      </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="_left_side_widjet " id="feature_holder" >
+              <div class="_station_stat_holder xdrfgd ccc">
+                      
+                      <i class="fa-solid fa-chart-pie stat_icon" style="color: #363636;"></i>
+                   
+                  </div>
+  
+                 <div class="_take_to_waves_holder xdrfgd ccc">
+                    
+                      
+                      <i class="fa-solid fa-magnifying-glass tat_icon" style="color: #363636;"></i>
+                     
+                  </div>
+          
+                  <div class="_station_comments_holder_ bdfgd ccc" id="station_comments">
+                     
+                     
+                      <i class="fa-solid fa-comment-dots comment_icon" style="color: #363636;"></i> 
+                     
+                  </div>
+  
+                  <div class="_station_content_all_holder csrfgt ccc">
+                     
+                     
+                          <i class="fa-solid fa-podcast frquented_wav_icon" style="color: #363636;"></i>
+                 
+                  </div>
+  
+                <div class="profile_setting_holder vpolopo ccc">
+                     
+               
+                          <i class="fa-solid fa-person-rays profile_settings_icon" style="color: #363636;"></i>
+                     
+                  </div>
+  
+                  <div class="create_wave_holder crtwav ccc">
+                     
+                     
+                          <i class="fa-solid fa-sliders create_wave_icon" style="color: #363636;"></i>
+                   
+                  </div>
+              </div>
+        </div>
+        <script src="{{files.client_aud_handler_js}}"></script>
+        <script>
+            {%block javascript%}
+            const data = {{obj|tojson|safe}}
+           {%endblock%}
+        </script>
+        <script src="{{files[1]}}"></script>
+    </body>
+</html>

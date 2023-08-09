@@ -1,0 +1,34 @@
+<html <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Create Your Station</title>
+        <meta name="description" content="Join the Station and get personal">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{files.css_file}}">
+        <link rel="shortcut icon" type="image/x-icon" href="static/app_pics/favicon.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="static/app_pics/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="static/app_pics/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="static/app_pics/favicon-16x16.png">
+    </head>
+    <body>
+      <div class="station_log_con_b">
+        <div class="station_log_in_b">
+            <div class="field_b">
+                <input type="text" name="station_name_" placeholder="Create Station" id="station_name_field" class="station_data_xxx" autocomplete="off">
+                  <span class="same_sta_name_msg_is_here msg_err" id="inv_sta"></span>
+                <input type="text" name="station_passkey_" placeholder="Create Station Password" id="station_password_field" class="station_data_xxx" autocomplete="off">
+                  <span class="inv_pass_is_here msg_err" id="inv_pass"></span>
+              <input type="email" name="station_email_" placeholder="Email For Station" id="station_email_field" class="station_data_xxx" autocomplete="off">
+                <span class="inv-em_is_here msg_err" id="inv_em"></span>
+              <br>
+                <button class="statio_data_xxx hit">Create</button>
+              <a href="/login">Log in</a>
+            </div> 
+        </div>
+    </div>
+    <script src="{{files.js_file}}"></script>
+   
+    </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{files[0]}}">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="shortcut icon" type="image/x-icon" href="static/app_pics/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="static/app_pics/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="static/app_pics/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="static/app_pics/favicon-16x16.png">
+</head>
+<body>
+  <nav class="nv_br">
+    <li><i class="fa-solid fa-chevron-left bck" style="color: rgb(255, 126, 126);cursor:pointer;"></i></li>
+    <li><a class='link_tag mrn' href="/"><i class="fas fa-search" style="color: rgb(255, 126, 126);"></i></a></li>
+    <li><a href="/ht_pg"><i class="fa-solid fa-clock-rotate-left check_history" style="color:rgb(255, 126, 126);"></i></a></li>
+    <li><a href="/pn_pg"><i class="fa-solid fa-circle-dot  pined_it" style="color: rgb(255, 126, 126);"></i></a></li>
+    <li><a class='link_tag mrn' href="/"><i class="fas fa-search" style="color: rgb(255, 126, 126);"></i></a></li>
+    <li><div class="ldr"></div></li>
+   </nav> 
+  <div class="main_cont">
+    <div class="sub_cont">
+     
+       <script>
+         document.querySelector('.bck').addEventListener('click',()=>{
+          window.history.back()
+         })
+       </script>
+     <div class="slider">
+          {% if user_data.IMAGE != 'no_image' %}
+          <center> <img src="static/images/{{ user_data.IMAGE }}" class="inner_image us_im"></center>
+          {% else %}
+          <center> <img src="static/app_pics/no_pro_pic.png" class="inner_image us_im"><br></center>
+          {% endif %}
+         <center> <h1>{{user_data.STATION}}</h1><br></center>
+
+        </div>
+    </div>
+    <div class="info">
+      <center><div class="box1">
+        {% if user_data.USERSELF.strip() %}
+       <center><b>About Station:</b>
+        {{ user_data.USERSELF }}</center>
+        {% endif %}
+      </div></center><br><hr>
+      <center><div class="box2">
+        <center><b>Why I started this?</b>
+        {% if user_data.DESCRIPTION.strip() %}
+        {{ user_data.DESCRIPTION }}</center>
+        {% endif %}
+      </div><br><br></center>
+      {% if not user_data.USERSELF.strip() and not user_data.DESCRIPTION.strip() %}
+      <center><img src="static/app_pics/no_info.png" height="450" width="450"></center>
+  {% endif %}
+    </div>
+    <div class="evr_cont">
+      <div class="slide cmt_view"></div>
+
+    </div> 
+  </div>
+  
+  <script>
+    {% block javascript %}
+    const user_data = {{ user_data | tojson | safe }};
+    {%endblock%}
+  </script>
+  <script src="{{files[1]}}"></script>
+</body>
+</html>

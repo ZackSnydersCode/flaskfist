@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html class="all_html">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Search</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{files[0]}}">
+  <script src="https://kit.fontawesome.com/99c36363f5.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="static/app_pics/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="static/app_pics/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="static/app_pics/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="static/app_pics/favicon-16x16.png">
+</head>
+
+<body>
+  <div class="anim">
+    <div class="brnd_img">
+      <img src="static/app_pics/euphony_com.png" class="animate__animated animate__zoomIn img_" height="150"
+        width="150">
+    </div>
+  </div>
+  <div class="all_content_wraper">
+    <div class='tgs_cont'>
+      <div class="tgs">
+      </div>
+      <div class="fred_cont"><i class="fa-solid fa-chevron-right fred"></i></div>
+    </div>
+    <hr>
+    <div id="loader" class="loader"></div>
+
+    <nav class="nav_br">
+      <div class="nav_cont">
+        <div class="search_widget">
+          <div class="search_container">
+            <input type="text" class="search_br" id="search_br" autocapitalize="false" autocomplete="false"
+              placeholder="Dive into the waves">
+            <div class="cncl_btn">
+              <i class="fa-solid fa-xmark" style="margin-right:3%;"></i>
+            </div>
+            <div class="cncl_btn"><a href="/ht_pg"><i class="fa-solid fa-clock-rotate-left check_history"
+                  style="color:rgb(0, 0, 0);"></i></a></div>
+            <div class="cncl_btn"><a href="/pn_pg"><i class="fa-solid fa-compact-disc  pined_it"
+                  style="color: #000000;"></i></a></div>
+
+            <div class="myx_sta_y"> <a href="/take_to_stat_graph">
+                <div class="_as_button_to_dashboard" id="station_profile"
+                  style="overflow:hidden;float:right;margin-left:1vw;margin-top:-0.2vw;display:grid;place-items:center;">
+                  {%if data.img != 'no_image'%}
+                  <img src="static/images/{{data.img}}">
+                  {%else%}
+                  <img src="static\app_pics\no_pro_pic.png">
+                  {%endif%}
+                </div>
+              </a></div>
+
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="result_widget" id="result_widget"></div>
+
+  </div>
+  <script src="{{files[1]}}"></script>
+</body>
+
+</html>

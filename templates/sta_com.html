@@ -1,0 +1,77 @@
+<html <!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{files[0]}}">
+        <script src="https://kit.fontawesome.com/99c36363f5.js" crossorigin="anonymous"></script>
+        <link rel="shortcut icon" type="image/x-icon" href="static/app_pics/favicon.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="static/app_pics/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="static/app_pics/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="static/app_pics/favicon-16x16.png">
+    </head>
+    <body>  
+        <div class="dash_board_content_wrapper" id="dash_board_content_holder">
+            <div class="right_widget">
+                <div class="_sta_box_">
+                    <div class="_graph_holder_ miodbjczzz">
+                    </div>
+                </div>
+            </div> 
+            <div class="_left_side_widjet " id="feature_holder" >
+              <div class="_station_stat_holder xdrfgd ccc">
+                      
+                      <i class="fa-solid fa-chart-pie stat_icon" style="color: #363636;"></i>
+                   
+                  </div>
+  
+                 <div class="_take_to_waves_holder xdrfgd ccc">
+                    
+                      
+                      <i class="fa-solid fa-magnifying-glass tat_icon" style="color: #363636;"></i>
+                     
+                  </div>
+          
+                  <div class="_station_comments_holder_ bdfgd ccc" id="station_comments">
+                     
+                     
+                      <i class="fa-solid fa-comment-dots comment_icon" style="color: #363636;"></i> 
+                     
+                  </div>
+  
+                  <div class="_station_content_all_holder csrfgt ccc">
+                     
+                     
+                          <i class="fa-solid fa-podcast frquented_wav_icon" style="color: #363636;"></i>
+                 
+                  </div>
+  
+                <div class="profile_setting_holder vpolopo ccc">
+                     
+               
+                          <i class="fa-solid fa-person-rays profile_settings_icon" style="color: #363636;"></i>
+                     
+                  </div>
+  
+                  <div class="create_wave_holder crtwav ccc">
+                     
+                     
+                          <i class="fa-solid fa-sliders create_wave_icon" style="color: #363636;"></i>
+                   
+                  </div>
+              </div>
+        </div>
+        <script src="{{files.js_file}}"></script>
+        <script>
+            {%block javascript%}
+            const key = {{data|tojson|safe}}
+            const sts = {{status|tojson|safe}}
+  
+         {%endblock%}
+                      
+          </script>
+          <script src="{{files[1]}}"></script>
+    </body>
+</html>

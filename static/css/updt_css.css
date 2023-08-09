@@ -1,0 +1,369 @@
+:root {
+  --background: rgb(255, 255, 255);
+  --step_color: rgba(255, 255, 255, 0.404);
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #ffffff;
+  user-select: none;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+::-webkit-scrollbar {
+width: 10px;
+height: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+background-color: #00000000;
+border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+background-color: #00000000;
+}
+.dash_board_content_wrapper{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  place-items: center;
+}
+.span_container_err_msg{
+
+margin-top:10px;
+
+}
+.span_container_err_msg span{
+  font-weight: 680;
+  font-size: 0.9rem;
+  text-align: center;
+  color: red;
+}
+.right_widget {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  place-items: center;
+  width: 100%;
+  height:100%;
+}
+.mech_container{
+  width: 90%;
+  height: 80%;
+  padding: 1%;
+  border-radius: 1%;
+  box-shadow: 0px 1px 20px 1px rgb(59, 59, 59);
+
+}
+
+._left_side_widjet {
+width: 100%;
+height: auto;
+background-color: var(--background);
+display: flex;
+flex-direction: row;
+}
+
+._left_side_widjet .ccc {
+place-items: center;
+background-color: var(--background);
+color: #000000;
+height: auto;
+width: 100%;
+padding-right:1%;
+font-family: var(--font);
+cursor: pointer;
+}
+._left_side_widjet div{
+  margin-bottom: 0;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  width: auto;
+}
+._left_side_widjet i {
+  border-radius: 50%;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: 0.1s;
+}
+._left_side_widjet i:hover{
+  background: #0000003f;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 5rem;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+.left_sub_widget{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  place-items: center;
+}
+textarea{
+margin-bottom: 5px;
+padding: 5px;
+width: 100%;
+box-sizing: border-box;
+border-radius: 4px;
+background-color: var(--step_color);
+resize: none;
+color: #000000;
+}
+.wave_wave_form{
+  width: 100%;
+  height: auto;
+  background-color: rgb(0, 0, 0);
+  border-radius: 0.5rem;
+  margin-bottom: 0.1rem;
+}
+
+.wave_description {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.tools_container {
+  width: auto;
+  height: 100%;
+  padding: 1rem;
+
+}
+.file_graphics {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  place-items: center;
+}
+.mech_feature_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1%;
+  background-color: var(--background);
+}
+
+.file_handeling_frame{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+}
+.file_handeling_frame div{
+  margin-left:5%;
+}
+.file_handeling_frame div i{
+  background:rgb(0, 0, 0);
+  height: 2rem;
+  width: 2rem;
+  border-radius: 5rem;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  transition: 0.1s;
+  cursor: pointer;
+}
+.file_handeling_frame div i:hover{
+  background:rgba(147, 147, 147, 0.603);
+}
+.media-file.tool.file_ {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  transition: 0.1s;
+
+}
+.media-file.tool.file_ :hover{
+  background:rgba(147, 147, 147, 0.603); 
+}
+.media-file.tool.file_::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.media-file.tool.file_ input[type="file"] {
+  position: absolute;
+  left: -9999px;
+}
+
+
+
+
+.custom-file-input {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  border: 2px dashed #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.custom-file-input:hover {
+  background-color: #e0e0e0;
+}
+
+.custom-file-input input[type="file"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.pico {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.tpn_rmvrr{
+  position: relative;
+  background: rgb(0, 0, 0);
+  color: #ffffff;
+  height:auto;
+  width: auto;
+  padding: 0.5%;
+  border-radius: 3%;
+  border: none;
+  outline: none;
+ top: 40%;
+  transition: 0.1s;
+}
+.tpn_rmvrr:hover{
+  background-color: #71717173;
+}
+
+
+
+
+
+
+@media screen and (max-width:800px) {
+  
+  .mech_container{
+      width: 100%;
+      height: 100%;
+      box-shadow: none;
+      border-radius: 0rem;
+  }
+  ::-webkit-scrollbar {
+      width: 0px;
+      height: 0px;
+    }
+  
+    ::-webkit-scrollbar-thumb {
+      background-color: #00000000;
+      border-radius: 5px;
+    }
+  
+    ::-webkit-scrollbar-track {
+      background-color: #cccccc00;
+    }
+
+  
+.right_widget{
+height: 100%;
+width: 100%;
+}     
+.file_graphics{
+width: 100%;
+height: 100%;
+}
+
+.custom-file-input {
+position: relative;
+width: 100%;
+height: 40vh;
+overflow: hidden;
+background-color: #f0f0f0;
+border: 2px dashed #ccc;
+display: flex;
+align-items: center;
+justify-content: center;
+color: #777;
+cursor: pointer;
+transition: 0.3s;
+}
+
+.custom-file-input:hover {
+background-color: #e0e0e0;
+}
+
+.custom-file-input input[type="file"] {
+position: absolute;
+left: 0;
+top: 0;
+opacity: 0;
+width: 100%;
+height: 100%;
+cursor: pointer;
+}
+
+.pico {
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100%;
+width: 100%;
+}
+.file_handeling_frame div{
+  margin-left: auto;
+  margin-top: 5%;
+}
+.mech_feature_container{
+  height:auto;
+}
+}
+@media screen and (min-width:801px) {
+._left_side_widjet div{
+  margin-bottom: 0;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  width: auto;
+}
+._left_side_widjet i {
+  border-radius: 50%;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.tpn_rmvrr{
+  width: 10%;
+  height: auto;
+  top: 0;
+  left: 0;
+}
+
+}

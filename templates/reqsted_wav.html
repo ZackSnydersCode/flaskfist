@@ -1,0 +1,97 @@
+<html <!DOCTYPE html>
+<html class="bg_fm_drk">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{{requested_wave.TITLE}} from {{requested_wave.STATION}}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{files[0]}}">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/2.0.4/wavesurfer.min.js" integrity="sha512-mhqErQ0f2UqnbsjgKpM96XfxVjVMnXpszEXKmnJk8467vR8h0MpiPauil8TKi5F5DldQGqNUO/XTyWbQku22LQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="shortcut icon" type="image/x-icon" href="static/app_pics/favicon.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="static/app_pics/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="static/app_pics/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="static/app_pics/favicon-16x16.png">
+      </head>
+
+     <body>   
+       <div class="alpha_cont bg_fm_drk">
+         <div class="main_view">
+            <div class="custom-input-container bg_fm">
+              <div class="bck_cont" style="display:flex;justify-content:center;place-items:center;"><i class="fa-solid fa-chevron-left bck_btn" style="cursor:pointer;color: #ffffff;"></i></div>
+              <script>
+                const bck = document.querySelector('.bck_btn')
+                bck.addEventListener('click',()=>{
+                  window.history.back()
+                })
+                
+              </script> 
+              <div class="profile" style="display: flex;justify-content:center;place-items:center;">
+              <a href='/station_profile?_search={{requested_wave.STATION}}'> <div class="sta_im_view c">
+                  {%if requested_wave.STATION_IMAGE != 'no_image'%}
+                   <img src="static/images/{{requested_wave.STATION_IMAGE}}" class="pro_im mrn">
+                    {%else%}
+                  <img src="static/app_pics/no_pro_pic.png" class="pro_im mrn">
+                    {%endif%}
+                </div></a>
+              </div>
+                <div class="options mrn">
+                    <a href="/ht_pg"><i class="fa-solid fa-clock-rotate-left check_history" style="color:rgb(231, 222, 222);"></i></a>
+                    <a href="/pn_pg"><i class="fa-solid fa-compact-disc  pined_it" style="color: #ffffff;"></i></a>
+                    <a class='link_tag mrn' href="/"><i class="fas fa-search" style="color: white;"></i></a>  
+                </div>
+              <div class="ding" style="display: flex;justify-content:center;place-items:center;"> <div class="lod_event _loading_"></div></div>  
+            </div>  
+                <div class="switch_view">
+                    <div class="clicked_view bg_fm_drk">
+                        <div class="all_cliked_container">
+                        <div class="switched_frm bg_fm">
+                            <div class="main_frm_img bg_fm"></div>
+                          
+                            <div class="wave_cntrl">
+                                <div class="back_ward wav_cntrl"> <i class="fa-solid fa-rotate-left bck_ward" style="color: #ffffff;padding:0.1rem; border-radius:50%;"></i></div>
+                                <div class="ply_pse wav_cntrl"><i class="fa-solid fa-circle-play wav_pler" style="color: #ffffff;padding:0.1rem; border-radius:50%;"></i></div>
+                               <div class="for_ward wav_cntrl"> <i class="fa-solid fa-rotate-right fr_ward" style="color: #ffffff;padding:0.1rem; border-radius:50%;"></i></div>
+                            </div>
+                            <div class="wav_frm"></div>   
+                        </div>
+                        <div class="switch_frm_info bg_fm_drk">
+                            <div class="general_info_container">
+                              <div class="tunned yhhdfdej"><i class="fa-solid fa-compact-disc tick_pin_it" style='color:rgb(255, 255, 255);padding:auto;'></i><span class="liked_nums" style="color:rgb(255, 255, 255);font-size:1rem;margin-left:10px;"">0</span></div>  
+                                <div class="views yhhdfdej"><i class="fa-solid fa-user-large view_ico" style="color:#fff;padding:auto;"></i><span class="liked_nums vw zz" style="color:rgb(255, 255, 255);font-size:1rem;margin-left:10px;">0</span></div>  
+                                <div class="likes yhhdfdej"><i class="fa-solid fa-heart like_ico" style='color:rgb(247, 6, 6);padding:auto;'></i><span class="liked_nums lv zz" style="color:rgb(255, 255, 255);font-size:1rem;margin-left:10px;"></span></div> 
+                              </div>
+                            <div class="ttl_dec"></div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="cmt_view">
+                        <div class="send_cmt bg_fm">
+                            <div class="rec_btn ico_style"><i class="fa-solid fa-microphone record_comment"></i></div>
+                            <div class="send_btn ico_style"><i class="fa-solid fa-paper-plane cpc"></i></div>
+                            <div class="cnts_spn"><span class="cnts"></span></div>
+                            <div class="up_dwn"><i class="fa-solid fa-chevron-up" style="color: #ffffff;"></i></div>
+                        </div>
+                        <div class="cmts_contnr"></div>
+                    </div>
+
+                </div>
+       </div>
+       </div>
+       <div class="rplys bg_fm_drk">
+        <nav class='bg_fm'>
+          <li class="bg_fm_drk"><i class="fa-solid fa-xmark hdxxx" style="color: #ffffff;"></i></li>
+        </nav>
+        <div class="ans_ bg_fm_drk"></div>
+       </div>
+       <script>
+        {% block javascript %}
+            const data = {{ requested_wave|tojson }};
+            const tnd = {{ tnd|tojson }};
+ {% endblock %}
+    </script>
+    <script src="{{files[1]}}"></script>
+    </body>
+</html> 

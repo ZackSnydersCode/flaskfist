@@ -1,0 +1,49 @@
+<html <!DOCTYPE html>
+<html class="html">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{{data.STATION}}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{files[0]}}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="shortcut icon" type="image/x-icon" href="static/app_pics/favicon.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="static/app_pics/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="static/app_pics/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="static/app_pics/favicon-16x16.png">
+    </head>
+    <body>
+        <nav class="navbar navbar-light bg-dark">
+            <li class="bck "><i class="fa-solid fa-chevron-left iop" style="color: rgb(0, 0, 0);"></i></li>
+                <li><a href="/ht_pg"><i class="fa-solid fa-clock-rotate-left check_history" style="color:rgb(0, 0, 0);"></i></a></li>
+                <li><a href="/pn_pg"><i class="fa-solid fa-compact-disc  pined_it" style="color: #000000;"></i></a></li>        
+            <li><a class='link_tag mrn iop' href="/"><i class="fas fa-search" style="color: rgb(0, 0, 0);"></i></a></li>
+            <li><div class="brand" href="/requested_wave?data={{data.STATION}}"></div></li>
+            <div class="sta_coins"></div>
+        </nav>
+        <div class="main_cont">
+           
+            <div class="ldr"></div> 
+            <div class="sub_cont"></div>
+          </div>
+       <script>
+        {%block javascript%}
+          const datas = {{data|tojson|safe}}
+         const prf_im_lnk = document.querySelector('.brand');
+         const query = `/station_profile?_search=${datas.STATION}`;
+         if(datas.STATION_IMAGE != 'no_image'){
+         prf_im_lnk.innerHTML = `<a href='${query}'><img src="static/images/${datas.STATION_IMAGE}" width="50" height="50" alt="" class="main_img"></a>`; 
+        }else{
+            prf_im_lnk.innerHTML = `<a href='${query}'><img src="static/app_pics/no_pro_pic.png" width="50" height="50" alt="" class="main_img"></a>`;   
+        }
+        const bck = document.querySelector('.bck')
+        bck.addEventListener('click',()=>{
+            window.history.back();
+        })
+         {%endblock%}
+    </script> 
+    <script src="{{files[1]}}"></script>
+
+    </body>
+</html>

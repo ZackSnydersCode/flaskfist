@@ -1,0 +1,44 @@
+<html <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Your Favourites</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{files[0]}}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="shortcut icon" type="image/x-icon" href="static/app_pics/favicon.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="static/app_pics/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="static/app_pics/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="static/app_pics/favicon-16x16.png">
+    </head>
+    <body> 
+       <nav class="nv_br">
+        <li><i class="fa-solid fa-chevron-left bck" style="color: #000000; margin-left:1rem;cursor:pointer;"></i></li>
+        <li><a class='link_tag mrn' href="/"><i class="fas fa-search" style="color: rgb(0, 0, 0);"></i></a></li>
+       </nav> 
+        <script>
+            const bck = document.querySelector('.bck')
+            bck.addEventListener('click',()=>{
+                window.history.back()
+            })
+        </script>
+         <div class="main_cont">
+           
+            <div class="sub_cont">
+                <div class="left_widget"></div>
+                <div class="right_widget">
+                    
+                        <b>
+                            Stay Tuned
+                        </b>                        <br>
+
+                        <img src="static/app_pics/sty_tune_img.png" class="wlcome">
+                    
+                </div>
+            </div>
+         </div>
+        <script src="{{files[1]}}"></script>
+    </body>
+</html>

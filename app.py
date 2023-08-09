@@ -739,7 +739,6 @@ def send_profile_cmts():
               }
                cmt_pckt['STATION_IMAGE'] = wave_pckt
                comment_holder.append(cmt_pckt)
-               print(comment_holder)
         return jsonify({'data':comment_holder})
     else:
         return render_login_page()
@@ -808,7 +807,6 @@ def delete_user_requested_wave():
                 dlt_this_file = document_to_delete['WAVE_FILE']
                 file_path = os.path.join(app.config['WAVES_FOLDER'],dlt_this_file)
                 os.remove(file_path)
-                print(document_to_delete)
                 data_base.db.History.delete_many(delete_this_from_history)
                 
 
@@ -1359,7 +1357,6 @@ def making_view_for_wave():
                     'DATE': load_to_json['DATE'],
                     'VIEWER': station_name
                 }
-                print(load_to_json['DATE'])
 
                 similar_doc = data_base.db.Views.find_one(view_doc)
                 if similar_doc is None:
@@ -1519,7 +1516,6 @@ def getting_the_replys_of_selected_comment():
         slected_cmt = request.args.get('customData')
         load_to_json = json.loads(slected_cmt)
         ski_count = (page_number - 1) * page_size
-        print(load_to_json['cmp'])
         find_in_db = data_base.db.Comment_replys.find({
             'rply_to':load_to_json['cmtr'],
             'commter_commented_on':load_to_json['cmt_td'],
@@ -1559,7 +1555,7 @@ if __name__ == '__main__':
     folder_path = 'static\\processing_waves'
     time_threshold = 3600
     delete_processing_waves_after_some_period(folder_path,time_threshold)
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000,debug=True)
 
 
 
